@@ -206,6 +206,9 @@ profile chromium_browser /usr/lib/@{chromium}/@{chromium} flags=(attach_disconne
   # Allow transitions to ourself and our sandbox
   /usr/lib/@{chromium}/@{chromium} ix,
   /usr/lib/@{chromium}/chrome-sandbox cx -> sandbox,
+  
+  # Allow launching crashpad_handler, chromium will not launch without it
+  /usr/lib/chromium/chrome_crashpad_handler ix,
 
   # Allow communicating with sandbox
   unix (receive, send) peer=(label=@{profile_name}//sandbox),
