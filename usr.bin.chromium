@@ -196,6 +196,9 @@ profile chromium_browser /usr/lib/@{chromium}/@{chromium} flags=(attach_disconne
   owner @{HOME}/.config/chromium/**/Cache/* mr,
   owner @{HOME}/.config/chromium/Dictionaries/*.bdic mr,
   owner @{HOME}/.config/chromium/**/Dictionaries/*.bdic mr,
+  
+  # Widevine DRM, Netflix will not work without this
+  owner @{HOME}/.config/chromium/WidevineCdm/**/libwidevinecdm.so m,
 
   # Allow transitions to ourself and our sandbox
   /usr/lib/@{chromium}/@{chromium} ix,
