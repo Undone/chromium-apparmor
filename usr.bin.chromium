@@ -199,6 +199,9 @@ profile chromium_browser /usr/lib/@{chromium}/@{chromium} flags=(attach_disconne
   
   # Widevine DRM, Netflix will not work without this
   owner @{HOME}/.config/chromium/WidevineCdm/**/libwidevinecdm.so m,
+  
+  # Mesa shader cache, blocking affects performance
+  owner @{HOME}/.cache/mesa_shader_cache/*/*.tmp k,
 
   # Allow transitions to ourself and our sandbox
   /usr/lib/@{chromium}/@{chromium} ix,
