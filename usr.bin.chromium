@@ -159,7 +159,6 @@ profile chromium_browser /usr/lib/@{chromium}/@{chromium} flags=(attach_disconne
   /usr/{include,share,src}** r,
 
   # Default profile allows downloads to ~/Downloads and uploads from ~/Public
-  owner @{HOME}/ r,
   owner @{HOME}/Public/ r,
   owner @{HOME}/Public/* r,
   owner @{HOME}/Downloads/ r,
